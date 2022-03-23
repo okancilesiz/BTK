@@ -1,0 +1,31 @@
+import random
+lotonumaraları = range(1,50)
+sonuclar = random.sample(lotonumaraları,6)
+while True:
+        islem = int(input("Hoşgeldiniz..."
+                                          "Oynamak için 1 'e Basınız"
+                                          "Sonuçları için 2 ye Basınız."
+                                          "Oyundan Çıkmak için 3 e basınız."
+                                          ))
+        if islem == 1:
+             sayi1 = int(input("Birinci Sayıyı Giriniz"));
+             sayi2 = int(input("İkinci  sayıyı gir: "));
+             sayi3 = int(input("Üçüncü  sayıyı gir: "));
+             sayi4 = int(input("Dördüncü  sayıyı gir: "));
+             sayi5 = int(input("Beşinci  sayıyı gir: "));
+             sayi6 = int(input("Altıncı  sayıyı gir: "));
+             List = [sayi1,sayi2,sayi3,sayi4,sayi5,sayi6]
+        elif islem == 2:
+                sonuc1= set(List)
+                sonuc= set(sonuclar)
+                bilinensayilar=sonuc.intersection(List)
+                print("Girmiş olduğunuz sayılar",List)
+                print("Loto Sonuçları",sonuclar)
+                if bilinensayilar== set():
+                        print("Hiç sayı bilemediniz.")
+                else:
+                        print(f"Bilinen Sayılar: {bilinensayilar}")
+        elif islem == 3:
+         break
+else:
+     print("Oyundan Çıktınız.")
